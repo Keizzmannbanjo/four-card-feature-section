@@ -70,10 +70,10 @@ body {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(4, 100px);
   gap: 2rem;
   margin-top: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4,200px);
 }
 
 .card {
@@ -86,33 +86,27 @@ body {
 .card-supervisor {
   --color-cyan: hsl(180, 62%, 55%);
   border-top: 3px solid var(--color-cyan);
-  grid-row: 2 / span 2;
 }
 
 .card-team-builder {
   --color-red: hsl(0, 78%, 62%);
   border-top: 3px solid var(--color-red);
-  grid-column: 2;
-  grid-row: span 2;
 }
 
 .card-calculator {
   --color-blue: hsl(212, 86%, 64%);
   border-top: 3px solid var(--color-blue);
-  grid-column: 3;
-  grid-row: 2 / span 2;
 }
 
 .card-karma {
   --color-orange: hsl(34, 97%, 64%);
   border-top: 3px solid var(--color-orange);
-  grid-column: 2;
-  grid-row: 3 / span 2;
 }
+
 
 .card span {
   display: block;
-  width: 15%;
+  width: 20%;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -126,6 +120,30 @@ body {
 img {
   width: 100%;
 }
-/* @media (min-width:) */
+@media (min-width: 940px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  .card-supervisor {
+    grid-row: 2 / span 2;
+  }
+
+  .card-team-builder {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+
+  .card-calculator {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+  }
+
+  .card-karma {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+  }
+}
 
 /* ? GRID CARDS STYLES ENDS HERE */
